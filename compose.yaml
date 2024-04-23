@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  frontend:
+    image: 21bcp258front
+    ports:
+      - "3000:3000"
+
+  backend:
+    image: meetchheda29/21bcp258
+    restart: always
+    ports:
+      - "3001:3001"
+    depends_on:
+      - mongodb
+    environment:
+      - MONGO_URI=mongodb+srv://<meetchheda29>:<meet2908@>@cluster1.b9vwxsl.mongodb.net/test
+
+  mongodb:
+    image: mongo
+    restart: always
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_DATABASE=test
+      - MONGO_INITDB_ROOT_USERNAME=meet
+      - MONGO_INITDB_ROOT_PASSWORD=meet
+
