@@ -1,4 +1,4 @@
-## Building a Three-Tier Application with Docker: A Step-by-Step Tutorial
+## Building a Three-Tier Application with Docker
 
 In this project, we are building a simple web application following the three tier architecture. We'll go over how to use Docker containers to create a three-layer website with a front end, a back end, and a database in this tutorial. 
 
